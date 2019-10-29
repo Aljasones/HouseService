@@ -5,7 +5,7 @@ import java.util.List;
 
 public class HouseService {
 
-    List<House> listHouse = new ArrayList<>();
+    private List<House> listHouse = new ArrayList<>();
 
     public void addNew (House house) {
         listHouse.add(house);

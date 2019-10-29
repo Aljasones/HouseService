@@ -37,19 +37,12 @@ public class HouseService {
         List<House> firstresults = new ArrayList<>();
 
         for (House house : listHouse) {
-            if (house.getArea().toLowerCase().contains(area.toLowerCase())){
+            if (house.getArea().toLowerCase().contains(area.toLowerCase()) && house.getPrice() >= min && house.getPrice() <= max){
                 firstresults.add(house);
             }
         }
 
-        List<House> finishresults = new ArrayList<>();
-
-        for (House house : firstresults) {
-            if (house.getPrice() >= min && house.getPrice() <= max){
-                finishresults.add(house);
-            }
-        }
-        return finishresults;
+       return firstresults;
 
     }
 }
